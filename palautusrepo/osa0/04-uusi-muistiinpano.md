@@ -22,7 +22,7 @@ sequenceDiagram
       
   browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
   activate server
-  server-->>browser: [{content: "stop the genocide in palestine", date: "2024-05-      30T19:02:52.363Z"},…]
+  server-->>browser: [{content: "stop the genocide in palestine", date: "2024-05-        30T19:02:52.363Z"},…]
   deactivate server    
   
   Note right of browser: The browser executes the callback function that renders the notes 
