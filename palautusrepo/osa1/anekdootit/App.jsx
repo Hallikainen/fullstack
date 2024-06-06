@@ -13,18 +13,20 @@ const App = () => {
   ]
    
   const [selected, setSelected] = useState(0)
-  const [table, setTable] = useState(Array(anecdotes.length).fill(0))
-  const [randomInt, setRandomInt] = Math.floor(Math.random() * ((anecdotes.length - 1)) - 0 + 1)
 
   const handleRandomAnecdote = () => {
-    console.log(randomInt)
-    // setSelected(randomInt)
+    const min = 0
+    const max = anecdotes.length - 1
+    const randomInt = Math.floor(Math.random() * (max - min + 1) + min)
+    setSelected(randomInt)
     }
 
+  
 
   return (
     <div>
       <p>{anecdotes[selected]}</p>
+      <button onClick={handleRandomAnecdote}>Next anecdote</button>
     </div>
   )
 }
